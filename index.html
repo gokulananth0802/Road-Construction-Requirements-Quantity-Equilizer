@@ -29,7 +29,10 @@
     <center>
     <table>
      <tr>
-    <td><center><label>enter quantity : </label><br><input type="number" id="ib"></center></td><td onclick="cal()" style="padding:0px 10px 0px 10px; background-color:#ff6363;">results</td></tr>
+    <td>
+    <center><label>enter quantity : </label><br><input type="number" id="ib">
+    </center>
+    </td><td onclick="cal()" style="padding:0px 10px 0px 10px; background-color:#ff6363;">results</td></tr>
     <tr><td><label>bitumen</label>
     <select id="bp">
       <option>4</option>
@@ -58,33 +61,33 @@
     </div>
   </body> 
   <script>
-    let ib=document.getelementbyid('ib');
-    let r1=document.getelementbyid('r1');
-    let r2=document.getelementbyid('r2');
-    let r3=document.getelementbyid('r3');
-    let r4=document.getelementbyid('r4');
-    let r5=document.getelementbyid('r5');
-    let vr=document.getelementbyid("vr");
-    let bp=document.getelementbyid('bp');
-    let fp=document.getelementbyid('fp');
-    let a=0;
-    function cal(){
-      let cv1=bp.value ;
-      let cv2=fp.value;
-      r1.textcontent=(cv1/100)*ib.value;
-      a+=math.floor((cv1/100)*ib.value);
-      r5.textcontent=(10/100)*ib.value;
-      a+=math.floor((10/100)*ib.value);
-      r2.textcontent=(((100-10-cv1)/2)/100)*ib.value;
-      a+=math.floor((((100-10-cv1)/2)/100)*ib.value);
-      r3.textcontent=math.floor(((((100-10-cv1)/2)-((cv2/100)*(100-cv1-10)))/100)*ib.value);
-      a+=math.floor(((((100-10-cv1)/2)-((cv2/100)*(100-cv1-10)))/100)*ib.value);
-      r4.textcontent=math.floor(((cv2/100)*(100-cv1-10)/100)*ib.value);
-      a+=math.floor(((cv2/100)*(100-cv1-10)/100)*ib.value);
-      if(a<=ib.value)
-      vr.textcontent="👍 the addition of every requirements matches the desired quantity 👍";
-      else
-      vr.textcontent="❌";
-    }
+  let ib = document.getElementById('ib');
+  let r1 = document.getElementById('r1');
+  let r2 = document.getElementById('r2');
+  let r3 = document.getElementById('r3');
+  let r4 = document.getElementById('r4');
+  let r5 = document.getElementById('r5');
+  let vr = document.getElementById("vr");
+  let bp = document.getElementById('bp');
+  let fp = document.getElementById('fp');
+  let a = 0;
+  function cal() {
+  let cv1 = bp.value;
+  let cv2 = fp.value;
+  r1.textContent = (cv1 / 100) * ib.value;
+  a += Math.floor((cv1 / 100) * ib.value);
+  r5.textContent = (10 / 100) * ib.value;
+  a += Math.floor((10 / 100) * ib.value);
+  r2.textContent = (((100 - 10 - cv1) / 2) / 100) * ib.value;
+  a += Math.floor((((100 - 10 - cv1) / 2) / 100) * ib.value);
+  r3.textContent = Math.floor(((((100 - 10 - cv1) / 2) - ((cv2 / 100) * (100 - cv1 - 10))) / 100) * ib.value);
+  a += Math.floor(((((100 - 10 - cv1) / 2) - ((cv2 / 100) * (100 - cv1 - 10))) / 100) * ib.value);
+  r4.textContent = Math.floor(((cv2 / 100) * (100 - cv1 - 10) / 100) * ib.value);
+  a += Math.floor(((cv2 / 100) * (100 - cv1 - 10) / 100) * ib.value);
+  if (a <= ib.value)
+  vr.textContent = "ð the addition of every requirement matches the desired quantity ð";
+  else
+  vr.textContent = "â";
+  }
   </script>
 </html>
